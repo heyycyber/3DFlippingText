@@ -1,0 +1,56 @@
+body {
+  background-color: #000;
+  margin: 0;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.loader {
+  perspective: 700px;
+}
+.loader > span {
+  font-size: 13vw;
+  font-family: system-ui;
+  display: inline-block;
+  animation: flip 2s infinite linear;
+  transform-origin: 0 70%;
+  transform-style: preserve-3d;
+}
+@keyframes flip {
+  35% {
+    transform: rotateX(360deg);
+    filter: hue-rotate(360deg);
+  }
+  100% {
+    transform: rotatex(360deg);
+  }
+}
+.loader > span:nth-child(even) {
+  color: white;
+  text-shadow: 0px 0px 12px aqua;
+}
+.loader > span:nth-child(odd) {
+  color: aqua;
+  text-shadow: 0px 0px 12px white;
+}
+.loader > span:nth-child(2) {
+  animation-delay: 0.2s;
+}
+.loader > span:nth-child(3) {
+  animation-delay: 0.4s;
+}
+.loader > span:nth-child(4) {
+  animation-delay: 0.6s;
+}
+.loader > span:nth-child(5) {
+  animation-delay: .8s;
+}
+.loader > span:nth-child(6) {
+  animation-delay: 1s;
+}
+.loader > span:nth-child(7) {
+  animation-delay: 1.2s;
+}
